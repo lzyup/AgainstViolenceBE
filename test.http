@@ -1,0 +1,30 @@
+@url=http://localhost:4000/api
+@json=Content-Type: application/json
+### root
+get {{url}}/users
+
+### 注册
+post {{url}}/register
+{{json}}
+
+{
+    "username":"jackli2",
+    "password":"3333asd33"
+}
+### 登录
+post {{url}}/login
+{{json}}
+
+{
+    "username":"jackli2",
+    "password":"3333asd33"
+}
+
+### 登出
+get {{url}}/logout
+{{json}}
+
+
+###个人中心
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYmIwMGU4MzhjYzk5ODMyODhjMWI5YyIsImlhdCI6MTU3MjUzNzg4N30.som-uS_Wnb0Z5oMDGVICWIB8fXy8sb9OOuKKM7RTtn4
